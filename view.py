@@ -16,6 +16,12 @@ class Cli(Cmd):
         '''
         print node path
         '''
+        try:
+            int(arg)
+        except ValueError:
+            print("please specify a node id, see ln")
+            return
+
         for node in nd.resolved_nodes.values():
             if int(arg) == id(node):
                 while True:

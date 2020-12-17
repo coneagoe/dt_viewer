@@ -131,7 +131,7 @@ class Node(object):
         elif not has_label(string) and has_address(string):
             name, address = string.split('@')
             self.name = name.strip()
-            self.unit_address = name.strip()
+            self.unit_address = address.strip()
         else:
             if is_overlay_node(string):
                 label = string.strip()
